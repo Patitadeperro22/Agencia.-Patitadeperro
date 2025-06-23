@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Viajes de Aniversario - Patita de Perro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fbd3e9, #fcb69f, #f7c6d4);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+    }
+
+    h1 {
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+      margin-bottom: 25px;
+      font-size: 2.3em;
+      text-align: center;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .tarjeta {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+
+    .tarjeta img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .tarjeta .info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .tarjeta .info h2 {
+      margin: 0;
+      font-size: 1.4em;
+      color: #e91e63;
+    }
+
+    .tarjeta .info p {
+      margin-top: 8px;
+      color: #444;
+      font-size: 0.95em;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 100;
+      transition: transform 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp img {
+      width: 35px;
+      height: 35px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Viajes Románticos para Celebrar tu Aniversario 💕</h1>
+
+  <div class="galeria">
+    <!-- Tarjeta 1 -->
+    <div class="tarjeta">
+      <img src="https://source.unsplash.com/featured/?paris,couple" alt="Viaje a París">
+      <div class="info">
+        <h2>París en Amor</h2>
+        <p>Revive el romance en la ciudad del amor, con cenas frente a la Torre Eiffel.</p>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="tarjeta">
+      <img src="https://source.unsplash.com/featured/?beach,couple" alt="Playa romántica">
+      <div class="info">
+        <h2>Escapada a la Playa</h2>
+        <p>Relájense juntos en la arena blanca y disfruten del atardecer más especial.</p>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="tarjeta">
+      <img src="https://source.unsplash.com/featured/?cruise,couple" alt="Crucero romántico">
+      <div class="info">
+        <h2>Crucero de Aniversario</h2>
+        <p>Un viaje por el mar con cenas románticas, paisajes inolvidables y amor eterno.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="whatsapp" href="https://wa.me/5210000000000" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+</body>
+</html>
+

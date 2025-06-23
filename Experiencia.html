@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Patita de Perro - Viajes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    .navbar {
+      background: rgba(141, 152, 162, 0.6);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      font-size: 64px;
+      font-weight: bold;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 10px;
+    }
+
+    .navbar nav a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .navbar nav a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .trip-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+    }
+
+    .trip {
+      margin-bottom: 40px;
+    }
+
+    .trip h3 {
+      margin-bottom: 5px;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      scroll-behavior: smooth;
+      padding: 10px 0;
+    }
+
+    .carousel img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background-color: #25D366;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .whatsapp-button img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .logo-img {
+      width: 120px;
+      height: 100px;
+    }
+
+    .why-choose {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: black;
+      padding: 30px;
+      margin: 50px auto;
+      max-width: 900px;
+      border-radius: 10px;
+    }
+
+    .why-choose h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .reason {
+      margin-bottom: 15px;
+    }
+
+    .reason h3 {
+      margin: 0;
+      color: #004080;
+    }
+
+    .reason p {
+      margin: 5px 0 0 0;
+    }
+
+    @media (max-width: 768px) {
+      .carousel img {
+        width: 250px;
+        height: 160px;
+      }
+
+      .navbar .logo {
+        font-size: 36px;
+      }
+
+      .logo-img {
+        width: 80px;
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- WhatsApp -->
+  <a href="https://chat.whatsapp.com/DlzU4OinfcnLSSIjeBLSt9" class="whatsapp-button" target="_blank">
+    <img src="imagenes/agencia.svg" alt="WhatsApp" />
+  </a>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="imagenes/image (6).png" alt="logo" class="logo-img" />
+    <div class="logo">Patita de Perro</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="Destinos.html">Destinos</a>
+      <a href="quienes somos.html">Quiénes Somos</a>
+    </nav>
+    <img src="imagenes/image (6).png" alt="logo" class="logo-img" />
+  </div>
+
+  <!-- Viajes -->
+  <div class="trip-container">
+    <div class="trip">
+      <h3>📍 SIX FLAGS MEXICO</h3>
+      <p>📅 Fecha: 22/MAYO/2025</p>
+      <div class="carousel">
+        <img src="imagenes/SIXFLAGS.1" alt="paris1">
+        <img src="imagenes/SIGFLASG.2" alt="paris2">
+        <img src="imagenes/SIGFLAGS.3" alt="paris3">
+        <img src="imagenes/SIXFLAGS.4.jpeg" alt="paris4">
+      </div>
+    </div>
+  </div>
+  <div class="trip-container">
+    <div class="trip">
+      <h3>📍 CONCIERTO YAIR</h3>
+      <p>📅 Fecha: 10/03/2025</p>
+      <div class="carousel">
+        <img src="imagenes/CONCIERTO0.1" alt="paris1">
+        <img src="imagenes/CONCIERTO0.2" alt="paris2">
+        <img src="imagenes/CONCIERTO0.3" alt="paris3">
+        <img src="imagenes/CONCIERTO0.4.jpeg" alt="paris4">
+      </div>
+    </div>
+  </div>
+  <div class="trip-container">
+    <div class="trip">
+      <h3>📍 (PROXIMAMENTE)NASCAR</h3>
+      <p>📅 Fecha: 10/03/2025</p>
+      <div class="carousel">
+        <img src="https://source.unsplash.com/300x200/?paris,1" alt="paris1">
+        <img src="https://source.unsplash.com/300x200/?paris,2" alt="paris2">
+        <img src="https://source.unsplash.com/300x200/?paris,3" alt="paris3">
+        <img src="https://source.unsplash.com/300x200/?paris,4" alt="paris4">
+      </div>
+    </div>
+  </div>
+  <div class="trip-container">
+    <div class="trip">
+      <h3>📍 (PROXIMAMENTE)PAPALOTE MUSEO DEL NIÑO(Escurcion escolar)</h3>
+      <p>📅 Fecha: 10/03/2025</p>
+      <div class="carousel">
+        <img src="https://source.unsplash.com/300x200/?paris,1" alt="paris1">
+        <img src="https://source.unsplash.com/300x200/?paris,2" alt="paris2">
+        <img src="https://source.unsplash.com/300x200/?paris,3" alt="paris3">
+        <img src="https://source.unsplash.com/300x200/?paris,4" alt="paris4">
+      </div>
+    </div>
+  </div>
+  <div class="trip-container">
+    <div class="trip">
+      <h3>📍 (PROXIMAMENTE)KIDZANIA(Escurcion escolar)</h3>
+      <p>📅 Fecha: 10/03/2025</p>
+      <div class="carousel">
+        <img src="https://source.unsplash.com/300x200/?paris,1" alt="paris1">
+        <img src="https://source.unsplash.com/300x200/?paris,2" alt="paris2">
+        <img src="https://source.unsplash.com/300x200/?paris,3" alt="paris3">
+        <img src="https://source.unsplash.com/300x200/?paris,4" alt="paris4">
+      </div>
+    </div>
+  </div>
+  <div class="trip-container">
+    <div class="trip">
+      <h3>📍 (PROXIMAMENTE)SANTUARIO DE LAS LUCIERNAGAS</h3>
+      <p>📅 Fecha: 10/03/2025</p>
+      <div class="carousel">
+        <img src="https://source.unsplash.com/300x200/?paris,1" alt="paris1">
+        <img src="https://source.unsplash.com/300x200/?paris,2" alt="paris2">
+        <img src="https://source.unsplash.com/300x200/?paris,3" alt="paris3">
+        <img src="https://source.unsplash.com/300x200/?paris,4" alt="paris4">
+      </div>
+    </div>
+  </div>
+  <div class="trip-container">
+    <div class="trip">
+      <h3>📍 (PROXIMAMENTE)HUASCA DE OCAMPO</h3>
+      <p>📅 Fecha: 10/03/2025</p>
+      <div class="carousel">
+        <img src="https://source.unsplash.com/300x200/?paris,1" alt="paris1">
+        <img src="https://source.unsplash.com/300x200/?paris,2" alt="paris2">
+        <img src="https://source.unsplash.com/300x200/?paris,3" alt="paris3">
+        <img src="https://source.unsplash.com/300x200/?paris,4" alt="paris4">
+      </div>
+    </div>
+  </div>
+
+  <!-- ¿Por qué elegirnos? -->
+  <div class="why-choose">
+    <h2>¿Por qué elegir Patita de Perro?</h2>
+
+    <div class="reason">
+      <h3>🌟 Experiencia inigualable</h3>
+      <p>Más de 10 años planificando aventuras que dejan huella. Tu viaje está en manos expertas.</p>
+    </div>
+
+    <div class="reason">
+      <h3>🌍 Destinos únicos</h3>
+      <p>Te llevamos a los rincones más especiales del mundo con rutas diseñadas especialmente para ti.</p>
+    </div>
+
+    <div class="reason">
+      <h3>💬 Asistencia personalizada</h3>
+      <p>Estamos contigo antes, durante y después de tu viaje. Siempre disponibles para resolver tus dudas.</p>
+    </div>
+
+    <div class="reason">
+      <h3>💰 Precios competitivos</h3>
+      <p>Ofrecemos los mejores paquetes al mejor precio, sin sacrificar calidad.</p>
+    </div>
+
+    <div class="reason">
+      <h3>🛡️ Seguridad y confianza</h3>
+      <p>Somos una agencia 100% legal y responsable. Viaja con tranquilidad con Patita de Perro.</p>
+    </div>
+  </div>
+
+</body>
+</html>

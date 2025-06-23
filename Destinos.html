@@ -1,0 +1,300 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agencia de Viajes</title>
+  <style>
+    :root {
+      --turquesa: #6cdacf;
+      --verde-mar: #1da798;
+      --azul-profundo: #0167d3;
+      --amarillo: #f3b806;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: var(--turquesa);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      height: 70px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      position: relative;
+      padding: 5px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--azul-profundo);
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 3px;
+      background-color: var(--amarillo);
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 1rem;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      background: #000;
+      margin: 4px 0;
+      width: 25px;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        display: none;
+        background: var(--turquesa);
+        padding: 1rem;
+        border-radius: 10px;
+        position: absolute;
+        right: 2rem;
+        top: 80px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    .destinos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .destino {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .destino:hover {
+      transform: scale(1.03);
+    }
+
+    .destino img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .contenido {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .contenido h3 {
+      color: var(--azul-profundo);
+      margin-bottom: 1rem;
+    }
+
+    .cotizar-btn {
+      background: var(--amarillo);
+      color: #000;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .cotizar-btn:hover {
+      background: #e0a800;
+    }
+
+    .video-container {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--verde-mar);
+    }
+
+    .video-container h2 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .video-container iframe {
+      width: 90%;
+      max-width: 800px;
+      height: 250px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .video-container iframe {
+        height: 450px;
+      }
+    }
+
+    footer {
+      background: var(--verde-mar);
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25d366;
+      border-radius: 50%;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      z-index: 10000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe57;
+    }
+
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="imagenes/image (5).png" alt="Logo" class="logo">
+    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes somos.html">Quiénes Somos</a></li>
+        <li><a href="Experiencia.html">Experiencias</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="destinos">
+    <!-- 9 destinos -->
+    <div class="destino">
+      <a href="destino"><img src="imagenes/NASCAR.jpg" alt="París"></a>
+      <div class="contenido">
+        <h3>NASCAR MEXICO CITY</h3>
+      </div>
+    </div>
+    <div class="destino">
+      <a href="destino2.html"><img src="imagenes/PAPALOTE MUSEO DEL NIÑO.jpg" alt="Roma"></a>
+      <div class="contenido">
+        <h3>PAPALOTE MUSEO DEL NIÑO(Escurcion escolar)</h3>
+      </div>
+    </div>
+    <div class="destino">
+      <a href="destino3.html"><img src="imagenes/KITZANIA.jpg" alt="Londres"></a>
+      <div class="contenido">
+        <h3>KIDZANIA(Escurcion escolar)</h3>
+      </div>
+    </div>
+    <div class="destino">
+      <a href="destino4.html"><img src="imagenes/LUCIERNAGAS.jpeg" alt="Nueva York"></a>
+      <div class="contenido">
+        <h3>SANTUARIO DE LAS LUCIERNAGAS</h3>
+      </div>
+    </div>
+    <div class="destino">
+      <a href="destino5.html"><img src="imagenes/HUASCA.jpg" alt="Tokio"></a>
+      <div class="contenido">
+        <h3>HUASCA DE OCAMPO</h3>
+      </div>
+    </div>
+  
+  </section>
+
+  <section class="video-container">
+    <h2>Conoce la experiencia con Patita de Perro</h2>
+    <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 Patita de Perro Agencia de Viajes. Todos los derechos reservados.
+  </footer>
+
+  <a href="https://chat.whatsapp.com/DlzU4OinfcnLSSIjeBLSt9" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
+  </a>
+
+</body>
+</html>
